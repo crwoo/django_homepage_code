@@ -37,6 +37,3 @@ class User(AbstractUser):
     currency = models.CharField(choices=CURRENCY_CHOICES, max_length=3, blank=True)
 
     superrestaurant = models.BooleanField(default=False)
-
-
-00
