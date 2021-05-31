@@ -72,7 +72,8 @@ class Restaurant(core_md.TimeStampModel):
     city = models.CharField(max_length=80)
     address = models.CharField(max_length=140)
     instant_book = models.BooleanField(default=False)
-    working_hours = models.CharField(max_length=140)
+    working_hours = models.TimeField(null=True)
+    working_hours_end = models.TimeField(null=True)
     restaurant_type = models.ForeignKey(
         "restaurantType", on_delete=models.SET_NULL, null=True
     )
